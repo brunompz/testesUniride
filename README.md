@@ -4,7 +4,7 @@ Case Tests com Robot Framework no projeto acadêmico Uniride
 
 ## Resumo dos Testes Implementados
 
-Atualmente, o projeto conta com **15 casos de teste automatizados**, divididos em 4 suítes funcionais:
+Atualmente, o projeto conta com **20 casos de teste automatizados**, divididos em 5 suítes funcionais:
 
 | Módulo / Suíte | ID | Caso de Teste |
 | :--- | :--- | :--- |
@@ -35,4 +35,13 @@ Atualmente, o projeto conta com **15 casos de teste automatizados**, divididos e
 | :--- | :--- | :--- |
 | **Tela Inicial** | CT1 | Visualizar grupo criado por outra conta na aba inicial |
 | **Tela Inicial** | CT2 | Filtrar grupos de carona exclusivamente por solicitação |
+---
+
+| Módulo / Suíte | ID | Caso de Teste |
+| :--- | :--- | :--- |
+| **Cadastro de Usuário** | CT1 | Realizar cadastro de usuário com valores válidos |
+| **Cadastro de Usuário** | CT2 | Realizar cadastro de usuário com campos obrigatórios vazios |
+| **Cadastro de Usuário** | CT3 | Realizar cadastro de usuário com email não institucional |
+| **Cadastro de Usuário** | CT4 | Realizar cadastro de usuário com email já cadastrado |
+| **Cadastro de Usuário** | CT5 | Realizar cadastro de usuário menor de 18 anos |
 ---
