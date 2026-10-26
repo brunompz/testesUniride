@@ -31,7 +31,7 @@ ${MSG_MENOR_IDADE}        *Você precisa ter pelo menos 18 anos para se cadastra
 *** Keywords ***
 Abrir o navegador
     Open Browser    ${URL}    ${BROWSER}
-    Set Screenshot Directory    ${OUTPUT DIR}/screenshots
+    Set Screenshot Directory    ${CURDIR}/Outputs/${TEST NAME}
     Maximize Browser Window
 
 Fechar o navegador
