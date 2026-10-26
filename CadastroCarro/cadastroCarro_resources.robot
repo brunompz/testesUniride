@@ -47,7 +47,7 @@ ${ERRO_CATEGORIA}     id=erroCategoria
 *** Keywords ***
 Abrir o navegador
     Open Browser  ${URL}  ${Browser}
-    Set Screenshot Directory    Outputs/${TEST NAME}
+    Set Screenshot Directory    ${CURDIR}/Outputs/${TEST NAME}
     Maximize Browser Window
 
 Fechar o navegador

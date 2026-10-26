@@ -22,7 +22,7 @@ ${TENTATIVAS_MAXIMAS}     5
 *** Keywords ***
 Abrir o navegador
     Open Browser    ${URL}    ${BROWSER}
-    Set Screenshot Directory    ${OUTPUT DIR}/screenshots
+    Set Screenshot Directory    ${CURDIR}/Outputs/${TEST NAME}
     Maximize Browser Window
 
 Fechar o navegador
