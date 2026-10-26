@@ -14,7 +14,7 @@ Atualmente, o projeto conta com **15 casos de teste automatizados**, divididos e
 | **Login** | CT3 | Realizar login com campos vazios |
 | **Login** | CT4 | Realizar login com injeção de SQL no campo email |
 | **Login** | CT5 | Bloquear acesso após 5 tentativas consecutivas com senha incorreta |
-| :--- | :--- | :--- |
+---
 
 | Módulo / Suíte | ID | Caso de Teste |
 | :--- | :--- | :--- |
@@ -23,17 +23,17 @@ Atualmente, o projeto conta com **15 casos de teste automatizados**, divididos e
 | **Cadastro de Carro** | CT3 | Realizar cadastro de carro com campo de capacidade de passageiro 100 |
 | **Cadastro de Carro** | CT4 | Realizar cadastro de carro com campo de RENAVAM inválido |
 | **Cadastro de Carro** | CT5 | Realizar cadastro de carro com campos obrigatórios vazios |
-| :--- | :--- | :--- |
+---
 
 | Módulo / Suíte | ID | Caso de Teste |
 | :--- | :--- | :--- |
 | **Criação de Grupo** | CT1 | Criar grupo de oferta de carona recorrente válido |
 | **Criação de Grupo** | CT2 | Criar grupo de solicitação de carona única válido |
 | **Criação de Grupo** | CT3 | Criar grupo de solicitação com data menor que data atual |
-| :--- | :--- | :--- |
+---
 
 | Módulo / Suíte | ID | Caso de Teste |
 | :--- | :--- | :--- |
 | **Tela Inicial** | CT1 | Visualizar grupo criado por outra conta na aba inicial |
 | **Tela Inicial** | CT2 | Filtrar grupos de carona exclusivamente por solicitação |
-| :--- | :--- | :--- |
+---
