@@ -21,12 +21,19 @@ ${TENTATIVAS_MAXIMAS}     5
 
 *** Keywords ***
 Abrir o navegador
-    Open Browser    ${URL}    ${BROWSER}
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
+    ${prefs}=      Create Dictionary
+    ...    credentials_enable_service=${False}
+    ...    profile.password_manager_enabled=${False}
+    ...    profile.password_manager_leak_detection=${False}
+    Call Method    ${options}    add_experimental_option    prefs    ${prefs}
+    Call Method    ${options}    add_argument    --disable-save-password-bubble
+    Call Method    ${options}    add_argument    --disable-notifications
+    Open Browser    ${URL}    ${BROWSER}    options=${options}
     Set Screenshot Directory    ${CURDIR}/Outputs/${TEST NAME}
     Maximize Browser Window
 
 Fechar o navegador
-    Capture Page Screenshot
     Close Browser
 
 Acessar area de login
@@ -65,15 +72,17 @@ Verificar mensagem de erro no login
     Capture Page Screenshot
 
 Verificar que o login foi rejeitado
+    ${prev}=    Register Keyword To Run On Failure    Nothing
     ${alerta}=    Run Keyword And Return Status
     ...    Wait Until Element Is Visible    ${ICONE_ERRO}    timeout=3s
+    Register Keyword To Run On Failure    ${prev}
     Log    Alerta de erro exibido: ${alerta}
     Page Should Not Contain Element    ${LOGIN_SUCESSO}
     Capture Page Screenshot
 
 Errar a senha varias vezes seguidas
     FOR    ${i}    IN RANGE    ${TENTATIVAS_MAXIMAS}
-        Log    Tentativa incorreta ${i+1} de ${TENTATIVAS_MAXIMAS}
+        Log    Tentativa incorreta ${{ $i + 1 }} de ${TENTATIVAS_MAXIMAS}
         Fazer tentativa de login    ${EMAIL_ATIVO}    ${SENHA_INCORRETA}
         Wait Until Element Is Visible    ${ICONE_ERRO}    timeout=5s
         Fechar alerta se estiver aberto
